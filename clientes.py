@@ -2,7 +2,7 @@ import sqlite3
 
 
 class Cliente:
-    def __ini__(self):
+    def __init__(self):
         self.conn = sqlite3.connect('hamburguesa-rapida.db')
         self.c = self.conn.cursor()
 
@@ -39,7 +39,7 @@ class Cliente:
     
     def existe_cliente(self, nombre):
         """Verifica por nombre si existe un cliente""" 
-        self.c.execute("SELECT 1 FROM cleintes WHERE nombre=?", (nombre,))
+        self.c.execute("SELECT 1 FROM clientes WHERE nombre=?", (nombre,))
         return self.c.fetchone() is not None
               
 

@@ -26,7 +26,7 @@ class Pedido:
 
     def obtener_pedido_por_id(self, pedido_id):
         """Obtiene un pedido por su ID"""
-        self.c.execute("SELECT * FROM pedidos WHERE pedio_id=?", (pedido_id,))
+        self.c.execute("SELECT * FROM pedidos WHERE pedido_id=?", (pedido_id,))
         return self.c.fetchone()
 
     def generar_ticket(self, pedido_id, cliente, producto, precio):
