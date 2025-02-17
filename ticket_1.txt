@@ -1,0 +1,5 @@
+Ticket de pedido
+ID del Pedido: 1
+Cliente: Alan
+Producto: Hamburguesa
+Precio: $90.0

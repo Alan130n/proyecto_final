@@ -2,13 +2,13 @@ import sqlite3
 import os
 
 class Menu:
-    def ___init__(self):
+    def __init__(self):
         self.conn = sqlite3.connect('hamburguesa-rapida.db')
         self.c = self.conn.cursor()
 
     def agregar_producto(self, clave, nombre, precio):
         """Agrega un nuevo producto al menú"""
-        self.c.execute("INSERT INTO menu (clave,nombre, precio,)VALUES (?,?,?)",(clave,nombre,precio))
+        self.c.execute("INSERT INTO menu (clave,nombre, precio)VALUES (?,?,?)",(clave,nombre,precio))
         self.conn.commit()
         print("Producto agregado.")
 
